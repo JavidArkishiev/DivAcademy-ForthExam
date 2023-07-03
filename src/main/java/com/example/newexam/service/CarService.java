@@ -30,12 +30,13 @@ public class CarService {
         if (foundStudent.isPresent()) {
             Car newCar = foundStudent.get();
             newCar.setYear(car.getYear());
+            newCar.setNumber(car.getNumber());
             newCar.setId(car.getId());
             newCar.setPrice(car.getPrice());
             newCar.setModel(car.getModel());
             newCar.setMarca(car.getMarca());
             newCar.setManufacture_place(car.getManufacture_place());
-            return carRepository.save(new Car());
+            return carRepository.save(newCar);
 
 
         }
